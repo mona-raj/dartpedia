@@ -6,12 +6,18 @@ import 'arguments.dart';
 import 'exceptions.dart';
 
 class CommandRunner {
-  CommandRunner({this.onError});
+  CommandRunner({this.onOutput, this.onError});
 
   final Map<String, Command> _commands = <String, Command>{};
 
   UnmodifiableSetView<Command> get commands =>
       UnmodifiableSetView<Command>(<Command>{..._commands.values});
+
+  /// If not null, this method is used to handle output. Useful if you want to
+  /// execute code before the output is printed to the console, or if you
+  /// want to do something other than print output the console.
+  /// If null, the onInput method will [print] the output.
+  Future<void> Function(String)? onOutput;
 
   FutureOr<void> Function(Object)? onError;
 
@@ -20,14 +26,14 @@ class CommandRunner {
       final ArgResults results = parse(input);
       if (results.command != null) {
         Object? output = await results.command!.run(results);
-        print(output.toString());
+        if (onOutput != null) {
+          await onOutput!(onOutput.toString());
+        } else {
+          print(output.toString());
+        }
       }
-    } on Exception catch (exception) {
-      if (onError != null) {
-        onError!(exception);
-      } else {
-        rethrow;
-      }
+    } on Exception catch (e) {
+      print(e);
     }
   }
 
