@@ -3,13 +3,13 @@
   "packages": [
     {
       "name": "_fe_analyzer_shared",
-      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-93.0.0",
+      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-94.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
     {
       "name": "analyzer",
-      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-10.0.1",
+      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-10.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.9"
     },
@@ -105,7 +105,7 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/lints-6.0.0",
+      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/lints-6.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.8"
     },
@@ -123,7 +123,7 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.18.0",
+      "rootUri": "file:///C:/Users/mona/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.18.1",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -296,8 +296,26 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "cli",
+      "name": "_",
       "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+    },
+    {
+      "name": "cli",
+      "rootUri": "../cli",
+      "packageUri": "lib/",
+      "languageVersion": "3.10"
+    },
+    {
+      "name": "command_runner",
+      "rootUri": "../command_runner",
+      "packageUri": "lib/",
+      "languageVersion": "3.10"
+    },
+    {
+      "name": "wikipedia",
+      "rootUri": "../wikipedia",
       "packageUri": "lib/",
       "languageVersion": "3.10"
     }
