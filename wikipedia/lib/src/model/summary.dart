@@ -54,7 +54,7 @@ class Summary {
         'description': final String description,
       } =>
         Summary(
-          titles: TitlesSet.fromJson(titles),
+          titles: TitleSet.fromJson(titles),
           pageid: pageid,
           extract: extract,
           extractHtml: extractHtml,
@@ -76,7 +76,7 @@ class Summary {
         },
       } =>
         Summary(
-          titles: TitlesSet.fromJson(titles),
+          titles: TitleSet.fromJson(titles),
           pageid: pageid,
           extract: extract,
           extractHtml: extractHtml,
