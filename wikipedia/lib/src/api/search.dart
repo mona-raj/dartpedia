@@ -1,0 +1,1 @@
+// This file handles search queries to find articles.
